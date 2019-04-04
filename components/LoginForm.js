@@ -54,6 +54,7 @@ class ConnectedForm extends Component {
                 style={{height: 40, width:200, borderBottomColor: 'red', borderBottomWidth: 1}}
                 placeholder="Username"
                 onChangeText={(username) => this.setState({username})}
+                spellCheck={false}
                 />
               <TextInput
                   style={{height: 40, width:200, borderBottomColor: 'red', borderBottomWidth: 1}}

@@ -5,6 +5,7 @@ import MonitorScreen from './screens/MonitorScreen';
 import HomeScreen from './screens/HomeScreen'
 import { Provider } from "react-redux";
 import store from "./redux/store/index";
+import { Button } from 'react-native';
 
 const MonitorStack = createStackNavigator(
   {
@@ -13,16 +14,22 @@ const MonitorStack = createStackNavigator(
   {
     defaultNavigationOptions: {
       title:'Meter Monitoring',
+      height:10,
+      headerRight: (
+      <Button
+        onPress={() => alert('This is a button!')}
+        title="Info"
+        color="#fff"
+      />
+    ),
       headerStyle: {
-        backgroundColor: 'powderblue',
+        backgroundColor: 'skyblue',
+        borderBottomWidth: 0
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
         fontWeight: 'bold',
       },
-    },
-    navigationOptions: {
-      tabBarLabel: 'Meter Monitor',
     },
   }
 );
